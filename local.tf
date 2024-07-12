@@ -3,6 +3,6 @@ locals {
   environment = var.environment
   tags = {
     environment = "pj"
-    project     = "linux"
+    project     = "lin"
   }
 }
