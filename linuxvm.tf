@@ -1,10 +1,10 @@
 
 resource "azurerm_linux_virtual_machine" "this_linux_vm" {
-  name                = "solar"
+  name                = "${local.owner}-${local.environment}-${var.linux_vm_name}"
   resource_group_name = azurerm_resource_group.this_rg.name
   location            = azurerm_resource_group.this_rg.location
   size                = "Standard_F2"
-  admin_username      = "Eka"
+  admin_username      = var.linux_admin_user 
   network_interface_ids = [
     azurerm_network_interface.this_vm_nic.id,
   ]

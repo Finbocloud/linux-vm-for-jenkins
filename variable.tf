@@ -18,6 +18,16 @@ variable "location" {
   type        = string
   default     = "uksouth"
 }
+variable "linux_vm_name" {
+  description = "linux vm name"
+  type        = string
+  default     = "solar"
+}
+variable "linux_admin_user" {
+  description = "linux vm admin username"
+  type        = string
+  default     = "Eka"
+}
 variable "linux_vm" {
   description = "linux vm name"
   type        = string
