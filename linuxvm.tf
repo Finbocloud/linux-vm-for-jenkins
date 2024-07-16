@@ -12,7 +12,7 @@ resource "azurerm_linux_virtual_machine" "this_linux_vm" {
   admin_ssh_key {
     username   = "Eka"
     public_key = file("~/.ssh/azure_terraform_key.pub")
-     #ssh-keygen -t rsa -b 4096 -f ~/.ssh/azure_terraform_key -C "vitaliseaka@ymail.com"
+    #ssh-keygen -t rsa -b 4096 -f ~/.ssh/azure_terraform_key -C "vitaliseaka@ymail.com"
   }
   os_disk {
     caching              = "ReadWrite"
