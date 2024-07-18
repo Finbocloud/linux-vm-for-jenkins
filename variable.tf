@@ -33,11 +33,6 @@ variable "linux_vm" {
   type        = string
   default     = "linuxvm"
 }
-variable "linux_admin_user" {
-  description = "windows username"
-  type        = string
-  default     = "adminuser"
-}
 variable "admin_user_ssh_username" {
   description = "windows username"
   type        = string

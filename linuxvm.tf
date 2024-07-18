@@ -4,7 +4,7 @@ resource "azurerm_linux_virtual_machine" "this_linux_vm" {
   resource_group_name = azurerm_resource_group.this_rg.name
   location            = azurerm_resource_group.this_rg.location
   size                = "Standard_F2"
-  admin_username      = var.linux_admin_user 
+  admin_username      = var.linux_admin_user
   network_interface_ids = [
     azurerm_network_interface.this_vm_nic.id,
   ]
@@ -26,6 +26,6 @@ resource "azurerm_linux_virtual_machine" "this_linux_vm" {
   }
   custom_data = filebase64("${path.module}/cloud-init.yml")
 }
-#ssh -i ~/.ssh/azure_terraform_key Eka@51.145.8.84
+#ssh -i ~/.ssh/azure_terraform_key Eka@51.145.42.110
 
 
